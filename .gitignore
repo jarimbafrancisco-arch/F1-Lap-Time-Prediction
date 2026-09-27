@@ -1,0 +1,21 @@
+# Python environments and temporary files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local FastF1 caches
+/cache/
+/fastf1_cache/
+
+# Downloaded and prepared datasets, recreated by the notebooks
+/data/race_laps_2022_2025.pkl
+/data/prepared_race_laps_2022_2025.pkl
+/data/failed_events.csv
+
+# Temporary Word and operating-system files
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,7 +1,7 @@
 ﻿fastf1==3.8.3
 pandas==2.3.3
 numpy==2.5.3
-
+seaborn==0.13.2
 matplotlib==3.11.1
 
 scikit-learn
