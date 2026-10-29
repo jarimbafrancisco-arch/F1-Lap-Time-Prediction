@@ -13,6 +13,10 @@ __pycache__/
 /data/race_laps_2022_2025.pkl
 /data/prepared_race_laps_2022_2025.pkl
 /data/failed_events.csv
+/data/app_predictions.pkl
+/data/app_predictions.csv
+/data/arima_results.pkl
+/data/arima_test_forecasts.pkl
 
 # Temporary Word and operating-system files
 ~$*

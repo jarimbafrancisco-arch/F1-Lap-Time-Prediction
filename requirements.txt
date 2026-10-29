@@ -6,5 +6,8 @@ matplotlib==3.11.1
 
 scikit-learn
 statsmodels
+optuna
+streamlit==1.66.1
+altair==6.3.0
 
 ipykernel==7.3.0

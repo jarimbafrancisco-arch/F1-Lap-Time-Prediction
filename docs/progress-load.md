@@ -1,6 +1,6 @@
 # Progress log
 
-23 September 2026 - first three and a half weeks.
+## 23 September 2026 - first three and a half weeks
 
 I set up Python, FastF1, the notebook environment and GitHub. I started with
 Monza 2024 to understand the data, then downloaded the 2022-2025 race data.
@@ -35,7 +35,7 @@ will handle interruptions in the lap sequence. The plan is to use 2022-2023
 for training, 2024 for validation and 2025 for testing, with MAE in seconds
 as the main metric. No models have been trained yet.
 
-28 September 2026 - this week.
+## 28 September 2026 - regression
 
 I wrote the model selection document and chose linear regression, gradient
 boosting and ARIMA to compare. In notebook 04, I used 2022-2023 for training
@@ -52,8 +52,7 @@ from standing restarts that passed my filtering checks. The first regression
 also predicted Belgian laps too fast on average. Next I will check how much
 restart laps affect the results before trying the other selected models.
 
-
-7 October 2026 - this week.
+## 7 October 2026 - exponential smoothing
 
 I built the smoothing model in notebook 05, using separate lap sequences for
 each driver and race and restarting after interruptions. I compared 24
@@ -74,3 +73,39 @@ with 0.3855 seconds for the baseline, an improvement of about 1.25%. This is
 a small improvement, rather than proof that the model is ready for live use.
 Next I will document the LO5 evidence and improvement proposals, then work
 on ARIMA as another model to compare.
+
+## 29 October 2026 - ARIMA and project review
+
+I completed notebook 06 and compared ARIMA with smoothing and the baseline.
+I tested 16 configurations on 2,400 pairs across all 24 validation races.
+The best configuration, (0,1,0), follows the same rule as the baseline.
+I investigated the second-ranked (0,1,1) to understand its error corrections.
+It improved on my original ARIMA model, but still performed worse than smoothing.
+
+On all 20,969 eligible test pairs, ARIMA achieved an MAE of 0.3900 seconds,
+compared with 0.3807 for smoothing and 0.3855 for the baseline. These scores
+include baseline fallbacks when ARIMA has too little history or an unreliable
+fit. I added a forecast plot and a comparison by validation race to see where
+its corrections helped and where they made predictions worse.
+
+I expected the baseline to be easy to beat, but the final improvement was
+about 1.25%, below my original 10% target. I am keeping the current filtering
+rules and leaving further restart handling for future work. I also reviewed
+the documents to separate the original plans from what I actually completed.
+
+Next I will finish the TICT document and prepare for the presentation. I need
+to practise explaining the models, evaluation and decisions in my own words.
+
+## 29 October 2026 - application
+
+I prepared the saved forecasts for the app and added pages for individual laps,
+model evaluation, a data sample, methodology and privacy. The app shows errors
+in seconds and explains when ARIMA repeats the previous lap. It uses the saved
+results, so selecting a lap does not run the models again.
+
+The prepared-data EDA after notebook 03 is still pending. I will do it myself
+in a notebook on 30 October.
+
+The app is a local demonstration. Public hosting, circuit animation and a
+formal compliance assessment are not completed. I still need to practise
+explaining the project for the presentation.
