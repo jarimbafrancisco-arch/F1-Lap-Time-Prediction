@@ -109,3 +109,13 @@ in a notebook on 30 October.
 The app is a local demonstration. Public hosting, circuit animation and a
 formal compliance assessment are not completed. I still need to practise
 explaining the project for the presentation.
+
+## 31 October 2026 - prepared-data EDA and hand-in review
+
+The prepared-data EDA mentioned in the previous entry is now completed in
+notebook 08. It uses the prepared dataset from notebook 03 and focuses on
+the 35,873 eligible training pairs from 2022-2023. This adds an analysis of
+the filtered data alongside the earlier raw-data exploration in notebook 02.
+
+This EDA was analysed by my data teacher and I got some feedback on what I could improve, which was also added. This was the final version of EDA with more insights and a better
+way to look into what I need for my model.
