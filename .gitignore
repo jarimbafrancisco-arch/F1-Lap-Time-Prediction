@@ -5,6 +5,9 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
+# Local portfolio backups (keep on disk, exclude from the repository)
+/F1-Lap-Time-Prediction-Portfolio-*.zip
+
 # Local FastF1 caches
 /cache/
 /fastf1_cache/
