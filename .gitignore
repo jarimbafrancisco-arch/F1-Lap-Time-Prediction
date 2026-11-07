@@ -8,6 +8,9 @@ __pycache__/
 # Local portfolio backups (keep on disk, exclude from the repository)
 /F1-Lap-Time-Prediction-Portfolio-*.zip
 
+# Local compressed copy for uploading as a GitHub video attachment
+/media/demo-github.mp4
+
 # Local FastF1 caches
 /cache/
 /fastf1_cache/
